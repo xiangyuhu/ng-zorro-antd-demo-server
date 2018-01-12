@@ -1,0 +1,37 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8300/eureka/
+server:
+  port: 8388
+
+spring:
+  application:
+    name: service-zuul
+
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+
+  routes:
+    knowledgeApi:
+      path: /knowledge/**
+      serviceId: knowledge-provider
+
+##timeout config
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 30000

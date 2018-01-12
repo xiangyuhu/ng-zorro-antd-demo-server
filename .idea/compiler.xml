@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server" />
+        <module name="knowledge" />
+        <module name="knowledge-model" />
+        <module name="knowlwdge" />
+        <module name="xinyugu-common" />
+        <module name="xinyugu-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="knowledge" target="1.8" />
+      <module name="knowledge-model" target="1.8" />
+      <module name="knowlwdge" target="1.8" />
+      <module name="xinyugu-common" target="1.8" />
+      <module name="xinyugu-zuul" target="1.8" />
+      <module name="xy-star" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

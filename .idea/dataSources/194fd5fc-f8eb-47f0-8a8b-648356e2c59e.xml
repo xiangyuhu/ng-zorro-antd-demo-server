@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="study-interview@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="study-interview">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="api"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="tonglun"/>
+    <table id="9" parent="2" name="t_article"/>
+    <table id="10" parent="2" name="t_interview"/>
+    <table id="11" parent="2" name="t_knowledge_classification"/>
+    <table id="12" parent="2" name="t_order"/>
+    <table id="13" parent="2" name="t_user"/>
+    <column id="14" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="title">
+      <Position>2</Position>
+      <Comment>文章标题</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="16" parent="9" name="content">
+      <Position>3</Position>
+      <Comment>文章内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="17" parent="9" name="classification_no">
+      <Position>4</Position>
+      <Comment>文章分类</Comment>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="18" parent="9" name="sign">
+      <Position>5</Position>
+      <Comment>文章标签</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="create_time">
+      <Position>6</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="20" parent="9" name="author">
+      <Position>7</Position>
+      <Comment>作者</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="21" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="22" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="10" name="title">
+      <Position>2</Position>
+      <Comment>试题标题</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="24" parent="10" name="content">
+      <Position>3</Position>
+      <Comment>试题内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="25" parent="10" name="response">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="26" parent="10" name="analysis">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="27" parent="10" name="sign">
+      <Position>6</Position>
+      <Comment>标签</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="28" parent="10" name="classification_no">
+      <Position>7</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="29" parent="10" name="create_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="30" parent="10" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="11" name="id">
+      <Position>1</Position>
+      <Comment>主键</Comment>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="32" parent="11" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="33" parent="11" name="no">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="34" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="12" name="order_no">
+      <Position>2</Position>
+      <Comment>订单号</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="user_id">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="amout_total">
+      <Position>4</Position>
+      <DataType>decimal(5)|0</DataType>
+    </column>
+    <column id="39" parent="12" name="order_type">
+      <Position>5</Position>
+      <Comment>订单类型 0:打赏</Comment>
+      <DataType>char(50)|0</DataType>
+    </column>
+    <column id="40" parent="12" name="create_time">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="41" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="42" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="sex">
+      <Position>4</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="type">
+      <Position>5</Position>
+      <Comment>类型：0:管理员 1:普通用户 2:会员</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="47" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
